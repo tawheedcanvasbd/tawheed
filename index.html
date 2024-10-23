@@ -1055,7 +1055,7 @@ body{ font-family: AdorshoLipi, arial, sans-serif !important; }
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script type="text/javascript">
     (function(){
-        emailjs.init("EI64LNuOhELsTFjbW"); // Your EmailJS public key
+        emailjs.init(""); // Your EmailJS public key
     })();
 
     function increment() {
@@ -1105,10 +1105,10 @@ body{ font-family: AdorshoLipi, arial, sans-serif !important; }
             delivery_method: document.querySelector('input[name="deliveryMethod"]:checked').value,
             total_amount: document.getElementById('totalAmount').innerText,
             order_date: new Date().toLocaleString(),
-            to_email: "creativewebexperts02@gmail.com"
+            to_email: "@gmail.com"
         };
 
-        emailjs.send('service_9zc5hzt', 'template_rwv3v8n', templateParams)
+        emailjs.send('', 'template_rwv3v8n', templateParams)
             .then(function(response) {
                 console.log('Email sent successfully!', response.status, response.text);
                 sessionStorage.setItem('invoiceData', JSON.stringify(templateParams));
